@@ -1,0 +1,28 @@
+R 800 600
+NO textures/bluestone.xpm
+SO textures/eagle.xpm
+
+WE textures/purplestone.xpm
+EA textures/eagle.xpm
+
+S textures/barril.xpm
+F 220,100,30
+C 225, 30, 10
+
+11111
+100W1
+11111
+
+
+
+
+
+
+
+
+
+
+
+
+
+
