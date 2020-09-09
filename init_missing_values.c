@@ -31,7 +31,7 @@ static void	init_sprites(t_env *env)
 		}
 		i++;
 	}
-	env->rc.sprite = (t_sprite *)malloc(sizeof(t_sprite) * n_spt);
+	env->rc.sprite = (t_sprite *)ft_calloc(sizeof(t_sprite), n_spt);
 	if (!env->rc.sprite)
 		ft_exit(env, ERROR_13);
 	env->rc.nbr_sprites = n_spt;

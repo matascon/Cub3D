@@ -14,8 +14,8 @@
 # define CUB3D_H
 
 # include "libft/libft.h"
-//# include "minilibx_linux/mlx.h"
-# include "minilibx_mac/mlx.h"
+# include "minilibx_linux/mlx.h"
+//# include "minilibx_mac/mlx.h"
 # include <math.h>
 
 # define ERROR_0 "Error\nThere are not enough arguments to execute the program"
@@ -34,6 +34,7 @@
 # define ERROR_13 "Error\nIt could not allocate memory, try later"
 # define ERROR_14 "Error\n¡MAP ERROR!, what the fu** did you do wrong(?)"
 # define ERROR_15 "Error\nSome problem has happened while execution"
+# define ERROR_16 "Error\nThird argument gotta be '--save'"
 
 # define NO 0
 # define SO 1
@@ -43,13 +44,41 @@
 # define F 5
 # define C 6
 
-# define W_KEY 13
-# define A_KEY 0
-# define S_KEY 1
-# define D_KEY 2
-# define LEFT 123
-# define RIGHT 124
-# define ESC 53
+/*
+** MAC KEYS
+*/
+
+/*
+**# define W_KEY 13
+**# define A_KEY 0
+**# define S_KEY 1
+**# define D_KEY 2
+**# define LEFT 123
+**# define RIGHT 124
+**# define ESC 53
+*/
+
+/*
+** LINUX KEYS
+*/
+
+# define W_KEY 119
+# define A_KEY 97
+# define S_KEY 115
+# define D_KEY 100
+# define LEFT 65361
+# define RIGHT 65363
+# define ESC 65307
+
+typedef struct		s_bmp
+{
+	int				bmp;
+	int				fd;
+	int				padding;
+	int				size_file;
+	unsigned char	file_header[14];
+	unsigned char	info_header[40];	
+}					t_bmp;
 
 typedef struct		s_colors
 {
@@ -203,6 +232,7 @@ typedef struct		s_env
 	t_map			map;
 	t_raycasting	rc;
 	t_movement		mv;
+	t_bmp			bmp;
 }					t_env;
 
 void				ft_exit(t_env *env, char *message);
@@ -238,5 +268,6 @@ int					ft_key_press(int keycode, t_env *env);
 int					ft_movement(t_env *env);
 void				ft_move_left(t_env *env);
 void				ft_move_right(t_env *env);
+void				ft_bmp(t_env *env);
 
 #endif

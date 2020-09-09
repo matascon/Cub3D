@@ -49,6 +49,8 @@ void		ft_exit(t_env *env, char *message)
 		free(env->win_ptr);
 	if (env->file.file)
 		free(env->file.file);
+	if (env->rc.sprite)
+		free(env->rc.sprite);
 	free_dir_textures(env);
 	free_map(env);
 	free(env);

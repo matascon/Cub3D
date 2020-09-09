@@ -75,14 +75,14 @@ void 		ft_book_and_save_dimensions(t_env *env, int x, int y)
 {
 	int	i;
 
-	env->map.map = (char **)malloc(sizeof(char *) * (y + 1));
+	env->map.map = (char **)ft_calloc(sizeof(char *), (y + 1));
 	if (!env->map.map)
 		ft_exit(env, ERROR_13);
 	env->map.map[y] = NULL;
 	i = 0;
 	while (i < y)
 	{
-		env->map.map[i] = (char *)malloc(x + 1);
+		env->map.map[i] = (char *)ft_calloc(sizeof(char), x + 1);
 		if (!env->map.map[i])
 			ft_exit(env, ERROR_13);
 		env->map.map[i][x] = '\0';

@@ -22,7 +22,8 @@ SRCS = 	cub3d.c					\
 		raycast_sprite_2.c		\
 		keys.c					\
 		movement_1.c			\
-		movement_2.c
+		movement_2.c			\
+		screenshot.c
 OBJS = 	$(SRCS:.c=.o)
 FLAGS = -g
 FLAGS_LINUX = -lm -lbsd -lX11 -lXext
@@ -34,18 +35,19 @@ FLAGS_MAC = -framework OpenGL -framework Appkit
 all:		$(NAME)
 
 $(NAME):	$(OBJS) _libraries
-			@gcc -o $(NAME) $(OBJS) $(shell find libft/ -name "*.a") $(shell find minilibx_mac/ -name "*.a") $(FLAGS_MAC)
+			@gcc -o $(NAME) $(OBJS) $(shell find libft/ -name "*.a") \
+			$(shell find minilibx_linux/ -name "*.a") $(FLAGS_LINUX)
 
 _libraries:
 			@make -C libft
 			@make -C minilibx_linux
-			@make -C minilibx_mac
+			#@make -C minilibx_mac
 
 clean:
 			@rm -f $(OBJS)
 			@make clean -C libft
 			@make clean -C minilibx_linux
-			@make clean -C minilibx_mac
+			#@make clean -C minilibx_mac
 
 fclean:		clean
 			@rm -f $(NAME)

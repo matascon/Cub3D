@@ -23,6 +23,8 @@ void	ft_render_frame(t_env *env)
 		ft_exit(env, ERROR_13);
 	ft_raycast_wall(env);
 	ft_raycast_sprite(env);
+	if (env->bmp.bmp)
+		ft_bmp(env);
 	mlx_put_image_to_window(env->mlx_ptr, env->win_ptr, env->new_image, 0, 0);
 	mlx_do_sync(env->mlx_ptr);
 	mlx_destroy_image(env->mlx_ptr, env->new_image);
