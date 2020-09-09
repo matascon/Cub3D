@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   screenshot.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/09 16:56:51 by matascon          #+#    #+#             */
+/*   Updated: 2020/09/09 17:09:21 by matascon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub3d.h"
 
 static void	write_bmp(t_env *env)
@@ -50,16 +62,17 @@ static void	create_header(t_env *env)
 {
 	ft_bzero(env->bmp.file_header, 14);
 	ft_bzero(env->bmp.info_header, 40);
-	env->bmp.size_file = 14 + 40 + (3 * env->width_screen + env->bmp.padding) * env->height_screen;
+	env->bmp.size_file = 14 + 40 + (3 * env->width_screen + \
+	env->bmp.padding) * env->height_screen;
 	write_headers(env);
 	write(env->bmp.fd, &env->bmp.file_header, 14);
 	write(env->bmp.fd, &env->bmp.info_header, 40);
 }
 
-void	ft_bmp(t_env *env)
+void		ft_bmp(t_env *env)
 {
-	env->bmp.padding = 	(4 - (env->width_screen * 3) % 4) % 4;
-	if ((env->bmp.fd = open("Cub3d.bmp", O_WRONLY | O_TRUNC | \
+	env->bmp.padding = (4 - (env->width_screen * 3) % 4) % 4;
+	if ((env->bmp.fd = open("Cub3D.bmp", O_WRONLY | O_TRUNC | \
 	O_CREAT, 0777)) < 0)
 		ft_exit(env, ERROR_15);
 	create_header(env);

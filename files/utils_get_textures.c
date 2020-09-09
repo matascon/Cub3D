@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:27:04 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/07 17:27:04 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:08:23 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char		*ft_aux_textures(t_env *env, char *ptr, int type)
 {
 	char	*texture;
 	int		ready;
-	
+
 	ready = 0;
 	while (*ptr && !ready)
 	{

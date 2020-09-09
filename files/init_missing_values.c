@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:26:32 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/08 16:45:12 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:04:21 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void	init_orientation(t_env *env)
 	{
 		env->rc.player.dir_x = 1;
 		env->rc.player.dir_y = 0;
-	}	
+	}
 	env->rc.plan_x = -0.66 * env->rc.player.dir_y;
 	env->rc.plan_y = 0.66 * env->rc.player.dir_x;
 }

@@ -3,26 +3,22 @@ NO textures/bluestone.xpm
 SO textures/eagle.xpm
 
 WE textures/purplestone.xpm
-EA textures/eagle.xpm
 
 S textures/barril.xpm
-F 220,100,30
-C 225, 30, 10
-
-11111
-100W1
-11111
+F 140,0,230
+C 0, 0, 0
 
 
 
 
+			EA textures/wood.xpm
 
-
-
-
-
-
-
-
-
-
+		11111 111111111111
+		10001 100000000001
+		11101 100011111101
+		11101110011    101
+		110000000001111101
+		100001110000000001
+		10000111020000W001
+		111000000000000011
+		   1111111111111

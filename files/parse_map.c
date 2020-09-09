@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:26:52 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/07 17:26:53 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:05:28 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@ void	ft_parse_map(t_env *env, char *ptr_file)
 	int	y;
 
 	while (*ptr_file && *ptr_file != '\n')
+	{
+		if (!ft_isspace(*ptr_file))
+			ft_exit(env, ERROR_4);
 		ptr_file++;
+	}
 	ptr_file++;
 	ft_find_dimensions(ptr_file, &x, &y);
 	ft_book_and_save_dimensions(env, x, y);

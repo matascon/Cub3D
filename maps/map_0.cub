@@ -1,11 +1,11 @@
 R 900 600
-NO textures/texture_rick_morty_1.xpm
-SO textures/texture_rick_morty_2.xpm
+NO textures/bluestone.xpm
+SO textures/eagle.xpm
 
-WE textures/texture_rick_morty_3.xpm
-EA textures/texture_rick_morty_3.xpm
+WE textures/purplestone.xpm
+EA textures/wood.xpm
 
-S textures/rick.xpm
+S textures/barril.xpm
 F 0,0,0
 C 0,0,0
 

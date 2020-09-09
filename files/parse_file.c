@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:26:48 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/07 17:26:49 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:05:11 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static int	check_arguments(t_env *env)
 	return (1);
 }
 
-static void init_values_for_file(t_env *env)
+static void	init_values_for_file(t_env *env)
 {
 	env->rc.color.floor = 0;
 	env->rc.color.roof = 0;
@@ -79,7 +79,6 @@ static void init_values_for_file(t_env *env)
 void		ft_parse_file(t_env *env)
 {
 	char	*ptr_file;
-	int i;
 
 	init_values_for_file(env);
 	ptr_file = env->file.file;

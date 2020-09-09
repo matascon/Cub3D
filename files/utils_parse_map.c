@@ -6,13 +6,13 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:27:07 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/07 17:27:08 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:08:48 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-static int check_objects_map(char c)
+static int	check_objects_map(char c)
 {
 	if (c == '0')
 		return (1);
@@ -71,7 +71,7 @@ void		ft_fill_map(t_env *env, int x, int y)
 	}
 }
 
-void 		ft_book_and_save_dimensions(t_env *env, int x, int y)
+void		ft_book_and_save_dimensions(t_env *env, int x, int y)
 {
 	int	i;
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_sprite.c                                    :+:      :+:    :+:   */
+/*   raycast_sprite_2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 18:07:08 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/07 18:22:35 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:05:50 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static void	aux_render_sprite_1(t_env *env, int i)
 	aux_render_sprite_2(env);
 }
 
-void	ft_render_sprite(t_env *env)
+void		ft_render_sprite(t_env *env)
 {
 	int	i;
 	int	x;

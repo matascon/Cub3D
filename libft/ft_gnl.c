@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/09 16:59:20 by matascon          #+#    #+#             */
+/*   Updated: 2020/09/09 16:59:31 by matascon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_gnl(int fd, char **line)
@@ -13,7 +25,7 @@ int		ft_gnl(int fd, char **line)
 	{
 		buffer[1] = '\0';
 		if (buffer[0] == '\n')
-			break;
+			break ;
 		*line = ft_strsjoin(*line, buffer, 1, 0);
 	}
 	free(buffer);

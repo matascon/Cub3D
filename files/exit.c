@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:26:08 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/07 17:26:08 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:04:04 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ void		ft_exit(t_env *env, char *message)
 	free_dir_textures(env);
 	free_map(env);
 	free(env);
-	exit (0);
+	exit(0);
 }

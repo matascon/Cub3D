@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:25:51 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/08 16:59:27 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:01:35 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	init_main_values(t_env *env)
 ** Remember, errors are defined in cub3d.h
 */
 
-int	main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	t_env	*env;
 

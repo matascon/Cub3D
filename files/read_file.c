@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:26:56 by matascon          #+#    #+#             */
-/*   Updated: 2020/09/07 17:26:57 by matascon         ###   ########.fr       */
+/*   Updated: 2020/09/09 17:06:06 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,6 @@ static int	check_extension(char *name_file)
 	ptr = ft_strnstr(name_file, ".cub", ft_strlen(name_file));
 	if (!ptr)
 		return (0);
-	/*
-	** ¡WATCH OUT ON THIS PART, IT COULD GIVE YOU PROBLEMS IN FUTURE
-	*/
 	ptr = ptr + 4;
 	if (*ptr != '\0')
 		return (0);
