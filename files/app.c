@@ -12,27 +12,24 @@
 
 #include "cub3d.h"
 
-/*
-**static void adjust_screen(t_env *env)
-**{
-**	int	x;
-**	int	y;
-**
-**	mlx_get_screen_size(env->mlx_ptr, &x, &y);
-**	if (x < env->width_screen)
-**		env->width_screen = x;
-**	if (y < env->height_screen)
-**		env->height_screen = y;
-**}
-*/
+static void adjust_screen(t_env *env)
+{
+	int	x;
+	int	y;
+
+	mlx_get_screen_size(env->mlx_ptr, &x, &y);
+	if (x < env->width_screen)
+		env->width_screen = x;
+	if (y < env->height_screen)
+		env->height_screen = y;
+}
+
 
 void	ft_app(t_env *env)
 {
 	if (!(env->mlx_ptr = mlx_init()))
 		ft_exit(env, ERROR_15);
-/*
-**	adjust_screen(env);
-*/
+	adjust_screen(env);
 	if (!env->bmp.bmp)
 	{
 		if (!(env->win_ptr = mlx_new_window(env->mlx_ptr, \

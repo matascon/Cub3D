@@ -36,18 +36,18 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS) _libraries
 			@gcc -o $(NAME) $(OBJS) $(shell find libft/ -name "*.a") \
-			$(shell find minilibx_mac/ -name "*.a") $(FLAGS_MAC)
+			$(shell find minilibx_linux/ -name "*.a") $(FLAGS_LINUX)
 
 _libraries:
 			@make -C libft
-			#@make -C minilibx_linux
-			@make -C minilibx_mac
+			@make -C minilibx_linux
+			#@make -C minilibx_mac
 
 clean:
 			@rm -f $(OBJS)
 			@make clean -C libft
-			#@make clean -C minilibx_linux
-			@make clean -C minilibx_mac
+			@make clean -C minilibx_linux
+			#@make clean -C minilibx_mac
 
 fclean:		clean
 			@rm -f $(NAME)

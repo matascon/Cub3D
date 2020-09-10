@@ -14,8 +14,7 @@
 # define CUB3D_H
 
 # include "../libft/libft.h"
-//# include "../minilibx_linux/mlx.h"
-# include "../minilibx_mac/mlx.h"
+# include "../minilibx_linux/mlx.h"
 # include <math.h>
 
 # define ERROR_0 "Error\nThere are not enough arguments to execute the program"
@@ -48,20 +47,20 @@
 ** MAC KEYS
 */
 
-
-# define W_KEY 13
-# define A_KEY 0
-# define S_KEY 1
-# define D_KEY 2
-# define LEFT 123
-# define RIGHT 124
-# define ESC 53
-
+/*
+**# define W_KEY 13
+**# define A_KEY 0
+**# define S_KEY 1
+**# define D_KEY 2
+**# define LEFT 123
+**# define RIGHT 124
+**# define ESC 53
+*/
 
 /*
 ** LINUX KEYS
 */
-/*
+
 # define W_KEY 119
 # define A_KEY 97
 # define S_KEY 115
@@ -69,7 +68,7 @@
 # define LEFT 65361
 # define RIGHT 65363
 # define ESC 65307
-*/
+
 typedef struct		s_bmp
 {
 	int				bmp;
