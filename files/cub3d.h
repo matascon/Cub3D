@@ -76,7 +76,7 @@ typedef struct		s_bmp
 	int				padding;
 	int				size_file;
 	unsigned char	file_header[14];
-	unsigned char	info_header[40];	
+	unsigned char	info_header[40];
 }					t_bmp;
 
 typedef struct		s_colors

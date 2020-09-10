@@ -12,7 +12,7 @@
 
 #include "cub3d.h"
 
-static void adjust_screen(t_env *env)
+static void	adjust_screen(t_env *env)
 {
 	int	x;
 	int	y;
@@ -24,8 +24,7 @@ static void adjust_screen(t_env *env)
 		env->height_screen = y;
 }
 
-
-void	ft_app(t_env *env)
+void		ft_app(t_env *env)
 {
 	if (!(env->mlx_ptr = mlx_init()))
 		ft_exit(env, ERROR_15);
