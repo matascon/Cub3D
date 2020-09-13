@@ -71,7 +71,7 @@ static void	create_header(t_env *env)
 
 void		ft_bmp(t_env *env)
 {
-	env->bmp.padding = (4 - (env->width_screen * 3) % 4) % 4;
+	env->bmp.padding = env->width_screen % 4;
 	if ((env->bmp.fd = open("Cub3D.bmp", O_WRONLY | O_TRUNC | \
 	O_CREAT, 0777)) < 0)
 		ft_exit(env, ERROR_15);
