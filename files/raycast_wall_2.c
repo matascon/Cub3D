@@ -63,9 +63,6 @@ void				ft_raycast_columns(t_env *env, int x, int y)
 	if (env->rc.draw_end >= env->height_screen)
 		env->rc.draw_end = env->height_screen - 1;
 	set_texture(env, x);
-	y = 0;
-	if (env->rc.draw_end < 0)
-		env->rc.draw_end = env->height_screen;
 	y = env->rc.draw_end;
 	while (y < env->height_screen)
 	{

@@ -39,7 +39,7 @@ void		ft_app(t_env *env)
 	ft_render_frame(env);
 	mlx_hook(env->win_ptr, 2, 1, &ft_key_press, env);
 	mlx_hook(env->win_ptr, 3, 2, &ft_key_release, env);
-	mlx_hook(env->win_ptr, 17, 1 << 17, &ft_key_exit, env);
+	mlx_hook(env->win_ptr, 33, 3, &ft_key_exit, env);
 	mlx_loop_hook(env->mlx_ptr, &ft_movement, env);
 	mlx_loop(env->mlx_ptr);
 }

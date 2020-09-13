@@ -49,10 +49,11 @@ static void	sprite_distance(t_env *env)
 	while (i < env->rc.nbr_sprites)
 	{
 		env->rc.sprite[i].order = i;
-		env->rc.sprite[env->rc.sprite[i].order].distance = \
-		pow(env->rc.player.position_x - env->rc.sprite\
-		[env->rc.sprite[i].order].coord_x, 2) + pow(env->rc.player.\
-		position_y - env->rc.sprite[env->rc.sprite[i].order].coord_y, 2);
+		env->rc.sprite[i].distance = \
+		pow(env->rc.player.position_x - \
+		env->rc.sprite[i].coord_x, 2) + \
+		pow(env->rc.player.position_y - \
+		env->rc.sprite[i].coord_y, 2);
 		i++;
 	}
 }

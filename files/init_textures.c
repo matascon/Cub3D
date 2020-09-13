@@ -41,11 +41,11 @@ static void			pop_sprite(char *root_sprite, t_env *env, int i)
 {
 	if (!(env->rc.sprite[i].img_ptr = mlx_xpm_file_to_image(env->mlx_ptr, \
 	root_sprite, &env->rc.sprite[i].width, &env->rc.sprite[i].height)))
-		printf("Something wrong in sprite texture\n");
+		ft_exit(env, "Error\nSomething wrong in sprite texture");
 	if (!(env->rc.sprite[i].get_data = (int *)mlx_get_data_addr(\
 	env->rc.sprite[i].img_ptr, &env->rc.sprite[i].bits_per_pixel, \
 	&env->rc.sprite[i].size_line, &env->rc.sprite[i].endian)))
-		printf("Something wrong in sprite texture\n");
+		ft_exit(env, "Error\nSomething wrong in sprite texture");
 }
 
 static t_texture	pop_texture(char *root_texture, t_env *env)
@@ -54,10 +54,10 @@ static t_texture	pop_texture(char *root_texture, t_env *env)
 
 	if (!(texture.img_ptr = mlx_xpm_file_to_image(env->mlx_ptr, root_texture, \
 	&texture.width, &texture.height)))
-		printf("Something wrong in wall texture\n");
+		ft_exit(env, "Error\nSomething wrong in wall texture");
 	if (!(texture.get_data = (int *)mlx_get_data_addr(texture.img_ptr, \
 	&texture.bits_per_pixel, &texture.size_line, &texture.endian)))
-		printf("Something wrong in wall texture\n");
+		ft_exit(env, "Error\nSomething wrong in wall texture");
 	return (texture);
 }
 
